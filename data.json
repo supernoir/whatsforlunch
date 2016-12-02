@@ -1,3 +1,10 @@
 {
-    "lunch" : ["Pizza","Burger","Falafel","Enchiladas","Chicken Madras","Ceasar Salad"]
+    "food" : {
+        "1" : "Pizza",
+        "2" : "Burger",
+        "3" : "Falafel",
+        "4" : "Enchiladas",
+        "5" : "Chicken Madras",
+        "6" : "Ceasar Salad"
+        }
 }

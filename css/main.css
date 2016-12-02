@@ -13,7 +13,6 @@ body{
 #App{
     height: 100%;
     padding: 20%;
-    /*margin: 20%;*/
 }
 
 h1{
@@ -51,4 +50,8 @@ a.btn{
     background: rgba(0,0,0,.2);
     width: 400px;
     height: 200px;
+}
+
+#colorball{
+
 }
