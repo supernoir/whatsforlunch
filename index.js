@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 //import Colorball from './Colorball';
 
 
-// Giphy fun!
 const giphy = require('giphy-api-without-credentials')();
 
 let gif = () => {
@@ -52,7 +51,7 @@ class Lunch extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-		'food': 'Burgers'
+		'food': 'Pizza'
 	};
 	}
 
@@ -75,7 +74,7 @@ class Lunch extends React.Component{
 		return(
         <div id="content">
         <h1>What's for lunch?</h1>
-        <p>{this.state.food}</p>
+        <h2>{this.state.food}</h2>
         <FoodGif />
         <LunchItem/>
         <Randomizer />

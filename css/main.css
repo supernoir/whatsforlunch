@@ -58,3 +58,21 @@ a.btn{
     border: 5px solid rgba(0,0,0,.2);
     border-radius: 50%;
 }
+
+
+h2{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
+}
