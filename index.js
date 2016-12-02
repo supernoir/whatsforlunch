@@ -3,12 +3,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-let Food = () => {
-
+let Randomizer = () => {
+    return <div id="action"><a href="#" className="btn">Pick a Lunch Date!</a></div>
 }
 
 let LunchItem = () => {
-    return(<div>Pizza</div>);
+    return(<div id="lunchItem">Pizza</div>);
 }
 
 class Lunch extends React.Component{
@@ -18,6 +18,7 @@ class Lunch extends React.Component{
         }).then(function(res) {
        res.json().then(function(data) {  
         console.log(data);
+        return data;
       });  
         }).catch(function(err) {
 	        console.log(err);
@@ -26,9 +27,10 @@ class Lunch extends React.Component{
 
     render(){
     return(
-        <div>
-        <h1>These are your choices</h1>
-        <LunchItem/>
+        <div id="content">
+        <h1>What's for lunch?</h1>
+        <LunchItem />
+        <Randomizer />
         </div>
         );
     }

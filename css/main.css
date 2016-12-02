@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Lato');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background:-moz-linear-gradient(top, #cc78b2, #3a156b) no-repeat #3a156b;
+    background:-webkit-gradient(linear, left top, left bottom, from(#cc78b2), to(#3a156b)) no-repeat #3a156b;
+    color: floralwhite;
+    font-family: 'Lato','Helvetica','Arial',sans-serif; 
+}
+
+#App{
+    height: 100%;
+    padding: 20%;
+    /*margin: 20%;*/
+}
+
+h1{
+    font-family: 'Bungee',sans-serif;
+    color: floralwhite;
+    text-shadow: 1px 3px deeppink;
+    font-size: 64px;
+    text-align: center;
+}
+
+a.btn{
+    margin: 5px;
+    color: floralwhite;
+    text-decoration: none;
+    padding: 15px;
+    border: 1px solid floralwhite;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#content{
+    text-align: center;
+    padding: 10px;
+}
+
+#action{
+    text-align: center;
+    margin-top: 40px;
+}
+
+#lunchItem{
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background: rgba(0,0,0,.2);
+    width: 400px;
+    height: 200px;
+}
