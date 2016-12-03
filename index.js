@@ -6,33 +6,48 @@ import ReactDOM from 'react-dom';
 
 
 const giphy = require('giphy-api-without-credentials')();
+const foods = ['Burgers','Pizza','Enchiladas','French Fries','Curry','Shawarma','Sushi'];
 
-let gif = () => {
-    giphy.search({
-	        q: 'Pizza',
-	        rating: 'g'
-        }, function(err, res) {
-	        let randgif = res.data[0].images.downsized.url;
-            console.log(randgif);
-            return randgif
-        });
+let randFood = () => {
+	let rand = foods[Math.floor(Math.random()*foods.length)];
+	return rand
 }
 
-gif();
 
+
+let randgifurl = (rand) => {
+		return giphy.search({
+		q: rand,
+		rating: 'g'
+	}, function(err, res) {
+		let reslength = res.data.length;
+		let randkey = Math.floor(Math.random()*reslength);
+		let resulturl = res.data[randkey].images.downsized.url;
+		console.log(resulturl);
+		return resulturl
+	})
+}
+
+let trythis = (rand) => {
+	console.log("Hello" + randgifurl(rand));
+}
+
+trythis();
 
 
 class FoodGif extends React.Component{
     constructor(){
         super();
         this.state = {
-            'gif' : 'http://i.imgur.com/LmXe2gA.gif'
+            'gif' : 'http://media2.giphy.com/media/54Uq0B4fUcVP2/giphy.gif'
         }
     }
 
     render(){
-        return <div>
+        return <div id="result">
+		{console.log(randgifurl(randFood()))}
         <img src={this.state.gif} id="foodpic" />
+		<h2>{randFood()}</h2>
         </div>
     }
 }
@@ -42,9 +57,6 @@ let Randomizer = () => {
 	return <div id="action"><a href="#" className="btn">Pick a Lunch Date!</a></div>;
 };
 
-let LunchItem = () => {
-	return <div id="lunchItem"></div>;
-};
 
 
 class Lunch extends React.Component{
@@ -73,11 +85,8 @@ class Lunch extends React.Component{
 	render(){
 		return(
         <div id="content">
-        <h1>What's for lunch?</h1>
-        <h2>{this.state.food}</h2>
+        <a className="head">What's for Lunch?</a>
         <FoodGif />
-        <LunchItem/>
-        <Randomizer />
         </div>
 	);
 	}
