@@ -32,6 +32,7 @@ console.log(content);
 
 app.get('/', (req, res) => {
 	try {
+		console.log(res.statusCode);
 	res.json(content);
 } catch (err) {
 	res.send('Error');
